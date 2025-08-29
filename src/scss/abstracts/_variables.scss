@@ -1,0 +1,37 @@
+@use "./functions" as *;
+
+// outfit font
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+    /* colors */
+
+    // primary
+    --color-blue-500: hsl(215, 51%, 70%);
+    --color-cyan-400: hsl(178, 100%, 50%);
+
+    // neutral
+    --color-blue-950: hsl(217, 54%, 11%);
+    --color-blue-900: hsl(216, 50%, 16%);
+    --color-blue-800: hsl(215, 32%, 27%);
+    --color-white: hsl(0, 0%, 100%);
+
+    // semantics
+    --color-main-bg: var(--color-blue-950);
+    --color-card-bg: var(--color-blue-900);
+    --color-line: var(--color-blue-800);
+
+    // font
+
+    // font family
+    --ff-primary: "Outfit", sans-serif;
+
+    // font size
+    --fs-body: clamp(0.9375rem, 0.8523rem + 0.3409vw, 1.125rem);
+    --fs-h1: clamp(1.6875rem, 1.5341rem + 0.6136vw, 2.025rem);
+
+    // font weight
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+}

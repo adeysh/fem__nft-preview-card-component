@@ -1,0 +1,92 @@
+@use "../abstracts" as a;
+
+.preview-card {
+    @include a.flexbox($direction: column, $justify: center, $gap: a.rem(24));
+    padding: a.rem(24);
+    background-color: var(--color-card-bg);
+    border-radius: a.rem(18);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 100px;
+    max-inline-size: a.rem(400);
+
+    &__img {
+        position: relative;
+        border-radius: a.rem(12);
+        overflow: hidden;
+
+        &:hover .preview-card__overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-color: hsl(from var(--color-cyan-400) h s l / 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__title {
+        font-size: var(--fs-h1);
+        color: var(--color-white);
+        font-weight: var(--fw-semi-bold);
+
+        &:hover {
+            color: var(--color-cyan-400);
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    }
+
+    &__description {
+        color: var(--color-blue-500);
+        font-weight: var(--fw-light);
+    }
+
+    &__details {
+        @include a.flexbox($justify: space-between);
+        padding-block-end: a.rem(16);
+        border-bottom: 1px solid var(--color-line);
+
+        &-item {
+            @include a.flexbox($align: center, $gap: a.rem(5));
+        }
+    }
+
+    &__price {
+        color: var(--color-cyan-400);
+    }
+
+    &__time-left {
+        color: var(--color-blue-500);
+    }
+
+    &__footer {
+        @include a.flexbox($align: center, $gap: a.rem(16));
+    }
+
+    &__footer-img {
+        width: a.rem(36);
+        border: 1px solid var(--color-white);
+        border-radius: 50%;
+    }
+
+    &__footer-title {
+        color: var(--color-blue-500);
+    }
+
+    &__footer-author {
+        color: var(--color-white);
+        font-weight: var(--fw-light);
+
+        &:hover {
+            color: var(--color-cyan-400);
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+    }
+}
