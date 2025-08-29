@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [NFT Preview Card component](https://www.frontendmentor.io/solutions/nft-preview-card-component-using-htmlscss-N4s4EHL8FH)
+-   Live Site URL: [NFT Preview Card component](https://fem-nft-preview-card-component-chi.vercel.app/)
 
 ## My process
 
